@@ -43,6 +43,7 @@ export const Home = () => {
     <HomeWrapper>
       <Buttons>
         <Button
+          type="button"
           onClick={() =>
             addToast({
               title:
@@ -54,6 +55,7 @@ export const Home = () => {
           Open warning toast
         </Button>
         <Button
+          type="button"
           onClick={() =>
             addToast({
               title: "Success",
@@ -65,6 +67,7 @@ export const Home = () => {
           Open success toast
         </Button>
         <Button
+          type="button"
           onClick={() =>
             addToast({
               message: "This is a warning toast",

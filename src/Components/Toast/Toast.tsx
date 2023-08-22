@@ -36,14 +36,23 @@ export const Toast = ({
   };
 
   return (
-    <ToastContainer type={type}>
+    <ToastContainer $notificationType={type} role="dialog" tabIndex={0}>
       <IconContainer>{typeIcons[type]}</IconContainer>
       <TextContainer>
-        <Title type={type}>{title ? title : titleDefaultText[type]}</Title>
-        <Message type={type}>{message}</Message>
+        <Title $notificationType={type} tabIndex={0}>
+          {title ? title : titleDefaultText[type]}
+        </Title>
+        <Message $notificationType={type} tabIndex={0}>
+          {message}
+        </Message>
       </TextContainer>
-      <CloseButton type={type} onClick={onClose}>
-        <CloseSvg />
+      <CloseButton
+        $notificationType={type}
+        onClick={onClose}
+        type="button"
+        aria-label={`Close ${type} toast`}
+      >
+        <CloseSvg tabIndex={0} />
       </CloseButton>
     </ToastContainer>
   );

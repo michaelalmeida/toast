@@ -25,6 +25,7 @@ A toast component that can be integrated with web applications
 | styled-component | CSS as Components                                 |
 | RTL              | JavaScript Testing utility for React              |
 | Jest             | JavaScript Testing Framework                      |
+| uuid             | To generate random ids                            |
 
 ## Env
 

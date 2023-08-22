@@ -11,7 +11,7 @@ import {
 } from "../../UI/sizes";
 
 interface IToastStyle {
-  type?: "warning" | "success" | "danger";
+  $notificationType?: "warning" | "success" | "danger";
 }
 
 const typeColors = {
@@ -44,7 +44,8 @@ export const ToastContainer = styled.div<IToastStyle>`
   flex-direction: row;
   justify-content: center;
   padding: ${SPACING_SMALL}px;
-  background-color: ${({ type }) => typeColors[type || "warning"]};
+  background-color: ${({ $notificationType }) =>
+    typeColors[$notificationType || "warning"]};
   border-radius: ${BORDER_RADIUS}px;
   position: relative;
   box-sizing: border-box;
@@ -59,9 +60,9 @@ export const ToastContainer = styled.div<IToastStyle>`
 `;
 
 export const IconContainer = styled.div`
+  padding-top: 5px;
   display: flex;
   justify-content: center;
-  align-items: center;
 `;
 
 export const TextContainer = styled.div`
@@ -82,7 +83,8 @@ export const Title = styled.h3<IToastStyle>`
   font-size: 16px;
   font-weight: 600;
   line-height: 20px;
-  color: ${({ type }) => (type === "danger" ? WHITE : LIGHT_BLACK)};
+  color: ${({ $notificationType }) =>
+    $notificationType === "danger" ? WHITE : LIGHT_BLACK};
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -95,7 +97,8 @@ export const Message = styled.p<IToastStyle>`
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  color: ${({ type }) => (type === "danger" ? WHITE : LIGHT_BLACK)};
+  color: ${({ $notificationType }) =>
+    $notificationType === "danger" ? WHITE : LIGHT_BLACK};
 `;
 
 export const CloseButton = styled.button<IToastStyle>`
@@ -108,6 +111,7 @@ export const CloseButton = styled.button<IToastStyle>`
   margin-left: 16px;
 
   path {
-    fill: ${({ type }) => (type === "danger" ? WHITE : LIGHT_BLACK)};
+    fill: ${({ $notificationType }) =>
+      $notificationType === "danger" ? WHITE : LIGHT_BLACK};
   }
 `;
