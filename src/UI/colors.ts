@@ -4,3 +4,4 @@ export const DANGER = "#EB5757";
 export const BLACK = "#000000";
 export const LIGHT_BLACK = "rgba(0,0,0, 0.6)";
 export const WHITE = "#FFFFFF";
+export const MAIN_COLOR = "#fe6606";

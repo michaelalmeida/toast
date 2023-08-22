@@ -1,13 +1,12 @@
 import React from "react";
-import { Toast } from "./Toast";
+import { ToastProvider } from "./Components/Toast";
+import { Home } from "./Components/Home";
 
 function App() {
   return (
-    <div>
-      <Toast title="Teste" message="teste" />
-      <Toast title="Teste" message="teste" type="danger" />
-      <Toast title="Teste" message="teste" type="success" />
-    </div>
+    <ToastProvider>
+      <Home />
+    </ToastProvider>
   );
 }
 
