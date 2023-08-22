@@ -83,7 +83,7 @@ Now, you can trigger it using a onClick event, as a result of an endpoint call, 
     	 title: "Success",
     	 message: "This is a warning toast",
     	 type: "success",
-    	 timer:
+    	 timer: 6000
      })
 
 Since only message property is required (for the rest there are default values), when you need just a simple warning, you can call like this:
